@@ -1,0 +1,19 @@
+*** settings ***
+Library               Selenium2Library
+Suite Setup           Open Page
+Suite Teardown        Close All Browsers
+Resource              common.txt
+
+*** variables ***
+# This variable here will override default variable at setting.txt
+${HOST}    https://google.com
+${PAGE}    /
+
+*** Test Cases ***
+Search Data
+    Page Should Contain             Google
+    Input Text                      gbqfq           speedtest
+    Press Key                       gbqfq           \\13
+    Wait Until Keyword Succeeds     2s    0.1s      Page Should Contain     Speedtest.net by Ookla - The Global Broadband Speed Test
+    Input Text                      gbqfq           panti
+    Wait Until Keyword Succeeds     2s    0.1s      Page Should Contain     Pantip - Learn, Share & Fun
