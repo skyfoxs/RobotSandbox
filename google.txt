@@ -5,8 +5,8 @@ Suite Teardown        Close All Browsers
 Resource              common.txt
 
 *** variables ***
-# This variable here will override default variable at setting.txt
-${HOST}    https://google.com
+# This variable will override default variable at setting.txt
+${HOST}    https://google.co.th
 ${PAGE}    /
 
 *** Test Cases ***
