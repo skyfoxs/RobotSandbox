@@ -1,0 +1,8 @@
+*** Settings ***
+Library          Selenium2Library
+Resource         settings.txt
+
+*** Keywords ***
+Open Page
+    Open Browser    ${HOST}${PAGE}   browser=${BROWSER}
+    Maximize Browser Window

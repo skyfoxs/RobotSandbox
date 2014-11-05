@@ -1,0 +1,4 @@
+*** variables ***
+${HOST}         https://facebook.com
+${PAGE}         /
+${BROWSER}      gc
