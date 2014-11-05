@@ -10,4 +10,7 @@ ${PAGE}    /
 
 *** Test Cases ***
 Show First Page
+    [Documentation]    Test basic for loop
     Page Should Contain    facebook
+    :FOR    ${index}    IN RANGE    1    10
+    \       Log     ${index}    console=yes
